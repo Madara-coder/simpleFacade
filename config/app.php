@@ -195,6 +195,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\DateClassFacadeServiceProvider::class,
+        App\Providers\TestClassFacadeServiceProvider::class,
 
     ],
 
@@ -212,6 +213,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'DateClassFacade' => App\CustomSolution\DateClassFacade::class,
+        'TestClassFacade' => App\CustomSolution\TestClassFacade::class,
     ])->toArray(),
 
 ];

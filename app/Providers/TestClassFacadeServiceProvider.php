@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Providers;
+
+use App\CustomSolution\TestClass;
+use Illuminate\Support\ServiceProvider;
+
+class TestClassFacadeServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     */
+    public function register(): void
+    {
+        //
+    }
+
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
+    {
+        $this->app->bind('testClass', function () {
+            return new TestClass();
+        });
+    }
+}
